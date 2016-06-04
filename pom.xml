@@ -54,7 +54,11 @@
                     <programs>
                         <program>
                             <mainClass>crawler.NoticiasCrawler</mainClass>
-                            <name>oneoff</name>
+                            <name>noticiascrawler</name>
+                        </program>
+                        <program>
+                            <mainClass>distribuidor.Distribuidor</mainClass>
+                            <name>distribuidor</name>
                         </program>
                     </programs>
                 </configuration>
