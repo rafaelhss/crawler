@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@ComponentScan({"model","crawler"})
+@ComponentScan({"model","distribuidor"})
 @Configuration
 @EnableJpaRepositories(basePackages="model")
 @EntityScan(basePackages="model")
