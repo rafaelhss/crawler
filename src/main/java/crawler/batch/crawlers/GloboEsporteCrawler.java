@@ -1,13 +1,10 @@
-package crawler.crawlers;
+package crawler.batch.crawlers;
 
 import com.rometools.rome.feed.synd.SyndEntry;
 import com.rometools.rome.feed.synd.SyndFeed;
 import com.rometools.rome.io.SyndFeedInput;
 import com.rometools.rome.io.XmlReader;
-import crawler.noticia.Noticia;
-import org.springframework.batch.item.NonTransientResourceException;
-import org.springframework.batch.item.ParseException;
-import org.springframework.batch.item.UnexpectedInputException;
+import model.noticia.Noticia;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -17,10 +14,9 @@ import java.util.List;
  * Created by rafa on 04/06/2016.
  */
 public class GloboEsporteCrawler extends Crawler {
-    @Override
-    public List<Noticia> buscarNovasNoticias() {
 
-        List<Noticia> result = new ArrayList<Noticia>();
+    public GloboEsporteCrawler() {
+
         boolean ok = false;
         try {
             URL feedUrl = new URL("http://globoesporte.globo.com/servico/semantica/editorias/plantao/futebol/times/flamengo/feed.rss");
@@ -61,12 +57,6 @@ public class GloboEsporteCrawler extends Crawler {
             System.out.println("The first parameter must be the URL of the feed to read.");
             System.out.println();
         }
-
-        return result;
     }
 
-    @Override
-    public Object read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
-        return null;
-    }
 }

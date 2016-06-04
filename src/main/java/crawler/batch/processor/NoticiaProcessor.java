@@ -1,10 +1,10 @@
-package crawler.processor;
+package crawler.batch.processor;
 
 /**
  * Created by rafa on 04/06/2016.
  */
 
-import crawler.noticia.Noticia;
+import model.noticia.Noticia;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

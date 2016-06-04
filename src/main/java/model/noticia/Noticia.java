@@ -1,4 +1,4 @@
-package crawler.noticia;
+package model.noticia;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -8,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.net.URL;
-import java.util.List;
 
 /**
  * Created by rafa on 04/06/2016.

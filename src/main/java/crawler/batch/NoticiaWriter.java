@@ -1,6 +1,7 @@
-package crawler.noticia.repository;
+package crawler.batch;
 
-import crawler.noticia.Noticia;
+import model.noticia.Noticia;
+import model.noticia.NoticiaRepository;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

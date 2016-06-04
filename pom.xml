@@ -50,7 +50,7 @@
                     <assembleDirectory>target</assembleDirectory>
                     <programs>
                         <program>
-                            <mainClass>crawler.OneOffProcess</mainClass>
+                            <mainClass>crawler.NoticiasCrawler</mainClass>
                             <name>oneoff</name>
                         </program>
                     </programs>
