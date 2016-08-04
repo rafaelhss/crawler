@@ -64,7 +64,7 @@ public class HardMobReader implements ItemReader<HardMobPromo> {
                     }
                     try {
                         if (aux.indexOf(DESC) > 0) {
-                            aux = aux.substring(0, aux.indexOf(DESC) + DESC.length());
+                            aux = aux.substring(aux.indexOf(DESC) + DESC.length());
                             desc = aux.substring(0, aux.indexOf("</p>"));
                         }
                     } catch (Exception e){

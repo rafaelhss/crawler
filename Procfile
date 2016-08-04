@@ -1,1 +1,1 @@
-worker: sh target/bin/oneoff
+worker: sh target/bin/noticiascrawler

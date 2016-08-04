@@ -3,10 +3,7 @@ package model.noticia;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.net.URL;
 
 /**
@@ -20,6 +17,7 @@ public class Noticia {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
     private String titulo;
+    @Column( length = 100000 )
     private String texto;
     private URL imagem;
     private String tags;
