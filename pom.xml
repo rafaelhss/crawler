@@ -13,7 +13,7 @@
     </parent>
     <properties>
         <!-- The main class to start by executing java -jar -->
-        <start-class>crawler.NoticiasCrawler</start-class>
+        <start-class>crawler.ScheduledCrawler</start-class>
     </properties>
     <dependencies>
         <!-- http://mvnrepository.com/artifact/com.rometools/rome -->
@@ -62,12 +62,12 @@
                     <assembleDirectory>target</assembleDirectory>
                     <programs>
                         <program>
-                            <mainClass>crawler.NoticiasCrawler</mainClass>
+                            <mainClass>crawler.ScheduledCrawler</mainClass>
                             <name>noticiascrawler</name>
                         </program>
                         <program>
-                            <mainClass>distribuidor.Distribuidor</mainClass>
-                            <name>distribuidor</name>
+                            <mainClass>downloader.Distribuidor</mainClass>
+                            <name>downloader</name>
                         </program>
                     </programs>
                 </configuration>

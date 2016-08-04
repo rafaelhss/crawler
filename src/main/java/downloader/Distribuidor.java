@@ -1,4 +1,4 @@
-package distribuidor;
+package downloader;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@ComponentScan({"model","distribuidor"})
+@ComponentScan({"model", "downloader"})
 @Configuration
 @EnableJpaRepositories(basePackages="model")
 @EntityScan(basePackages="model")

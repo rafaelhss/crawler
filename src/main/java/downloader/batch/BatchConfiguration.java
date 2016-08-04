@@ -1,10 +1,14 @@
-package distribuidor.batch;
+package downloader.batch;
 
 /**
  * Created by rafa on 04/06/2016.
  */
 
-import distribuidor.batch.processor.NoticiaProcessor;
+import downloader.batch.hardmob.model.HardMobPromo;
+import downloader.batch.hardmob.processor.HardMobProcessor;
+
+
+import downloader.batch.hardmob.reader.HardMobReader;
 import model.noticia.Noticia;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecutionListener;
@@ -35,7 +39,7 @@ public class BatchConfiguration {
     public NoticiaWriter noticiaWriter;
 
     @Autowired
-    public NoticiaReader noticiaReader;
+    public HardMobReader hardMobReader;
 
 
     // tag::readerwriterprocessor[]
@@ -46,8 +50,8 @@ public class BatchConfiguration {
     }
 */
     @Bean
-    public NoticiaProcessor processor() {
-        return new NoticiaProcessor();
+    public HardMobProcessor processor() {
+        return new HardMobProcessor();
     }
 
     @Bean
@@ -83,8 +87,8 @@ public class BatchConfiguration {
     @Bean
     public Step step1() {
         return stepBuilderFactory.get("step1")
-                .<Noticia, Noticia>chunk(10)
-                .reader(noticiaReader)
+                .<HardMobPromo, Noticia>chunk(10)
+                .reader(hardMobReader)
                 .processor(processor())
                 .writer(writer())
                 .build();

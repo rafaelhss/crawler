@@ -2,3 +2,8 @@ heroku ps:scale worker=1
  heroku logs --tail
 
 heroku run "sh target/bin/oneoff"
+
+heroku addons:open scheduler
+
+
+heroku addons:open scheduler

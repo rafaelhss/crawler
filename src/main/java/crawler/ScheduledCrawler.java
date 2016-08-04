@@ -14,14 +14,11 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @Configuration
 @EnableJpaRepositories(basePackages="model")
 @EntityScan(basePackages="model")
-public class NoticiasCrawler
+public class ScheduledCrawler
 {
     public static void main(String[] args)
     {
-        SpringApplication.run(NoticiasCrawler.class);
-
-//        new CrawlerRunner().crawl();
-
-        System.out.println("crawler.NoticiasCrawler executed.");
+        SpringApplication.run(ScheduledCrawler.class);
+        System.out.println("crawler.ScheduledCrawler executed.");
     }
 }

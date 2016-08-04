@@ -1,4 +1,4 @@
-package distribuidor.batch;
+package downloader.batch;
 
 import model.noticia.Noticia;
 import model.noticia.NoticiaRepository;
@@ -18,9 +18,11 @@ public class NoticiaWriter implements ItemWriter<Noticia> {
 
     @Override
     public void write(List<? extends Noticia> list) throws Exception {
-        for (Noticia n : list){
-            System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     " + n.getTitulo());
+        for (Noticia n : list) {
+            List<Noticia> noticias = noticiaRepository.findByTitulo(n.getTitulo());
+            if (noticias == null || noticias.size() <= 0) {
+                noticiaRepository.save(n);
+            }
         }
-
     }
 }
