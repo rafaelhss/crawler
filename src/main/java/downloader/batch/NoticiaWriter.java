@@ -23,7 +23,7 @@ public class NoticiaWriter implements ItemWriter<Noticia> {
             List<Noticia> noticias = noticiaRepository.findByTitulo(n.getTitulo());
             if (noticias == null || noticias.size() <= 0) {
                 EmailDispatcher.SendSimpleMessage("rafaelhss@gmail.com", n);
-                //EmailDispatcher.SendSimpleMessage("humberto.sales@gmail.com", n);
+                EmailDispatcher.SendSimpleMessage("humberto.sales@gmail.com", n);
                 noticiaRepository.save(n);
             }
         }

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17e9101a-054b-4d8a-b539-4b46c5bcbe88" name="Default" comment="" />
+    <list default="true" id="17e9101a-054b-4d8a-b539-4b46c5bcbe88" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/downloader/batch/NoticiaWriter.java" afterPath="$PROJECT_DIR$/src/main/java/downloader/batch/NoticiaWriter.java" />
+    </list>
     <ignored path="herokujavasample.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,8 +27,8 @@
       <file leaf-file-name="NoticiaWriter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/downloader/batch/NoticiaWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5744308">
-              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.61295974">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -201,8 +203,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/mail/EmailDispatcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/downloader/batch/hardmob/reader/HardMobReader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/downloader/batch/NoticiaWriter.java" />
         <option value="$PROJECT_DIR$/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/downloader/batch/NoticiaWriter.java" />
       </list>
     </option>
   </component>
@@ -1196,8 +1198,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/downloader/batch/NoticiaWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5744308">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.61295974">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
