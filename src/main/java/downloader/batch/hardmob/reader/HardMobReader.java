@@ -9,10 +9,13 @@ import org.springframework.batch.item.UnexpectedInputException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.math.BigInteger;
 import java.net.URL;
+import java.net.URLConnection;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 import java.nio.file.Files;
@@ -29,14 +32,43 @@ public class HardMobReader implements ItemReader<HardMobPromo> {
     private String TITLE = "class=\"title";
     private String HREF = "href=\"";
     private String DESC = "class=\"threaddesc\">";
+    private String URL = "http://www.hardmob.com.br/promocoes/";
 
     private List<HardMobPromo> hardMobPromos = new ArrayList<HardMobPromo>();
 
     public HardMobReader() {
-        String out = "Pau Geral";
+        String out = "";
         try {
-            out = new Scanner(new URL("http://www.hardmob.com.br/promocoes/").openStream(), "UTF-8").useDelimiter("\\A").next();
+            // get URL content
+            URL url = new URL(URL);
+            URLConnection conn = url.openConnection();
 
+
+
+            conn.setRequestProperty("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
+            conn.setRequestProperty("Accept-Language","pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4");
+            conn.setRequestProperty("Cache-Control","max-age=0");
+            conn.setRequestProperty("Connection","keep-alive");
+            conn.setRequestProperty("Host","www.hardmob.com.br");
+            conn.setRequestProperty("Upgrade-Insecure-Requests","1");
+            conn.setRequestProperty("User-Agent","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36*/");
+
+
+
+
+            // open the stream and put it into BufferedReader
+            BufferedReader br = new BufferedReader(
+                    new InputStreamReader(conn.getInputStream()));
+
+            String inputLine;
+
+            //use FileWriter to write file
+
+            while ((inputLine = br.readLine()) != null) {
+                out += inputLine;
+            }
+
+            System.out.println("Busquei a URL. Tamanho:" + out.length());
         } catch (Exception e) {
             System.out.println("Erro buscando url:" + e.getMessage());
             e.printStackTrace();
